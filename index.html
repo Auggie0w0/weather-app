@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent" class="cookie-consent">
+        <p>This website uses cookies to ensure you get the best experience on our website.</p>
+        <div class="cookie-buttons">
+            <button id="accept-cookies">Accept</button>
+            <button id="decline-cookies">Decline</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="search-container">
+            <!-- Custom Dropdown -->
+            <div class="custom-dropdown">
+                <div class="dropdown-selected">
+                    <span>Select City</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="dropdown-options">
+                    <li data-value="new york">New York</li>
+                    <li data-value="london">London</li>
+                    <li data-value="tokyo">Tokyo</li>
+                    <li data-value="paris">Paris</li>
+                    <li data-value="sydney">Sydney</li>
+                </ul>
+            </div>
+            <input type="text" id="location-input" placeholder="Enter city name...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="weather-container">
+            <div class="current-weather">
+                <div class="weather-header">
+                    <h2 id="location">Location</h2>
+                    <p id="date">Date</p>
+                </div>
+                <div class="weather-info">
+                    <div class="temperature">
+                        <h2 id="temperature">--°C</h2>
+                        <!-- Temperature Converter -->
+                        <div class="temp-converter">
+                            <button class="temp-unit active" data-unit="celsius">°C</button>
+                            <button class="temp-unit" data-unit="fahrenheit">°F</button>
+                            <button class="temp-unit" data-unit="kelvin">K</button>
+                        </div>
+                        <div class="weather-condition">
+                            <img id="weather-icon" src="" alt="Weather Icon">
+                            <p id="condition">Condition</p>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="detail">
+                            <i class="fas fa-wind"></i>
+                            <div>
+                                <p>Wind Speed</p>
+                                <p id="wind-speed">-- km/h</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-tint"></i>
+                            <div>
+                                <p>Precipitation</p>
+                                <p id="precipitation">--%</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-temperature-high"></i>
+                            <div>
+                                <p>Feels Like</p>
+                                <p id="feels-like">--°C</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="forecast-container">
+                <h3>24-Hour Forecast</h3>
+                <div id="hourly-forecast" class="hourly-forecast">
+                    <!-- Hourly forecast items will be added here dynamically -->
+                </div>
+            </div>
+            <button id="refresh-btn" class="refresh-btn">
+                <i class="fas fa-sync-alt"></i> Refresh
+            </button>
+        </div>
+    </div>
+    
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
